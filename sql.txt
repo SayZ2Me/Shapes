@@ -1,0 +1,3 @@
+SELECT 	[Имя продукта],
+	CASE WHEN Продукты.[ID категории] IS NULL THEN 'NULL' ELSE Категории.[Имя категории] END AS [Имя Категории]
+	FROM Продукты LEFT OUTER JOIN Категории on Продукты.[ID категории] = Категории.ID
